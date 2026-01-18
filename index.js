@@ -5,10 +5,10 @@ import { z } from "zod";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/streamableHttp.js";
 
-const token = process.env.GITHUB_PERSONAL_ACCESS_TOKEN;
+const token = process.env.GH_PERSONAL_ACCESS_TOKEN;
 
 if (!token) {
-  console.error("❌ Falta GITHUB_PERSONAL_ACCESS_TOKEN en el environment");
+  console.error("❌ Falta GH_PERSONAL_ACCESS_TOKEN en el environment");
   process.exit(1);
 }
 

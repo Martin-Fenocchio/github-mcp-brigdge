@@ -15,7 +15,7 @@ jobs:
 
       # Set Fly secrets (will restart Machines if needed)
       - name: Set Fly secrets
-        run: flyctl secrets set GITHUB_PERSONAL_ACCESS_TOKEN="${{ secrets.GITHUB_PERSONAL_ACCESS_TOKEN }}" --app mcp-gh-bridge
+        run: flyctl secrets set GH_PERSONAL_ACCESS_TOKEN="${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}" --app mcp-gh-bridge
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
 
